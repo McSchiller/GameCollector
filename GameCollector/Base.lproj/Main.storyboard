@@ -89,6 +89,9 @@
                                     <color key="titleColor" red="0.82901161909999999" green="0.038858342919999997" blue="0.1783936918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteTabbed:" destination="Ek4-Ic-KH4" eventType="touchUpInside" id="mvX-zI-ZsZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -149,6 +152,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bild.png" width="578" height="498"/>
+        <image name="bild.png" width="398" height="289"/>
     </resources>
 </document>

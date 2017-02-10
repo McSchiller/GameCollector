@@ -13,8 +13,8 @@
 		CA0D46BF1E4DFA94008F07E7 /* GameCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA0D46BD1E4DFA94008F07E7 /* GameCollector.xcdatamodeld */; };
 		CA0D46C11E4DFA94008F07E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0D46C01E4DFA94008F07E7 /* Assets.xcassets */; };
 		CA0D46C41E4DFA94008F07E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0D46C21E4DFA94008F07E7 /* LaunchScreen.storyboard */; };
-		CA0D46CC1E4E0221008F07E7 /* bild.png in Resources */ = {isa = PBXBuildFile; fileRef = CA0D46CB1E4E0221008F07E7 /* bild.png */; };
 		CA0D46CE1E4E0371008F07E7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0D46CD1E4E0371008F07E7 /* GameViewController.swift */; };
+		CAB1409C1E4E29E3008721C8 /* bild.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB1409B1E4E29E3008721C8 /* bild.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		CA0D46C01E4DFA94008F07E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA0D46C31E4DFA94008F07E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA0D46C51E4DFA94008F07E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA0D46CB1E4E0221008F07E7 /* bild.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bild.png; sourceTree = "<group>"; };
 		CA0D46CD1E4E0371008F07E7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CAB1409B1E4E29E3008721C8 /* bild.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bild.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 		CA0D46B51E4DFA94008F07E7 /* GameCollector */ = {
 			isa = PBXGroup;
 			children = (
-				CA0D46CB1E4E0221008F07E7 /* bild.png */,
+				CAB1409B1E4E29E3008721C8 /* bild.png */,
 				CA0D46B61E4DFA94008F07E7 /* AppDelegate.swift */,
 				CA0D46B81E4DFA94008F07E7 /* GameListViewController.swift */,
 				CA0D46CD1E4E0371008F07E7 /* GameViewController.swift */,
@@ -105,6 +105,7 @@
 				TargetAttributes = {
 					CA0D46B21E4DFA94008F07E7 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = NR5J9H8TC7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -134,7 +135,7 @@
 			files = (
 				CA0D46C41E4DFA94008F07E7 /* LaunchScreen.storyboard in Resources */,
 				CA0D46C11E4DFA94008F07E7 /* Assets.xcassets in Resources */,
-				CA0D46CC1E4E0221008F07E7 /* bild.png in Resources */,
+				CAB1409C1E4E29E3008721C8 /* bild.png in Resources */,
 				CA0D46BC1E4DFA94008F07E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NR5J9H8TC7;
 				INFOPLIST_FILE = GameCollector/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -287,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NR5J9H8TC7;
 				INFOPLIST_FILE = GameCollector/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -315,6 +318,7 @@
 				CA0D46CA1E4DFA94008F07E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

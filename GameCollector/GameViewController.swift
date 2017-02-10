@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class GameViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class GameViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var imageContainer: UIImageView!
     @IBOutlet weak var imageTextfield: UITextField!
@@ -23,6 +23,7 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         super.viewDidLoad()
 
         imagePicker.delegate = self
+        imageTextfield.delegate = self
         
         if game != nil {
             deleteButton.isHidden = false
@@ -34,9 +35,15 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             deleteButton.isHidden = true
         }
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        imageTextfield.resignFirstResponder()
+        return true
+    }
 
     @IBAction func cameraTabbed(_ sender: Any) {
-       
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
         
     }
     
@@ -66,6 +73,18 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             manager.saveContext()
         }
          navigationController?.popViewController(animated: true)
+        
+    }
+    
+    @IBAction func deleteTabbed(_ sender: Any) {
+        let manager = UIApplication.shared.delegate as! AppDelegate
+        let context = manager.persistentContainer.viewContext
+        
+        context.delete(game!)
+        manager.saveContext()
+        
+        navigationController?.popViewController(animated: true)
+        
         
     }
 }
