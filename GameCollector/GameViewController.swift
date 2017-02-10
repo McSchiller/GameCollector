@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class GameViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -39,5 +40,13 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
 
     @IBAction func addTabbed(_ sender: Any) {
+        let manager = UIApplication.shared.delegate as! AppDelegate
+        let context = manager.persistentContainer.viewContext
+        let game = Game(context: context)
+        
+        game.name = imageTextfield.text
+        game.image = UIImagePNGRepresentation(imageContainer.image!)! as NSData
+        
+        manager.saveContext()
     }
 }
