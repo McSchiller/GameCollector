@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GameCollector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameListViewController" customModule="GameCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="Udq-RO-DPy">
             <objects>
-                <viewController id="Ek4-Ic-KH4" sceneMemberID="viewController">
+                <viewController id="Ek4-Ic-KH4" customClass="GameViewController" customModule="GameCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6xT-9K-uVl"/>
                         <viewControllerLayoutGuide type="bottom" id="u41-pT-fX7"/>
@@ -47,14 +47,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODE-es-FGX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bild.png" translatesAutoresizingMaskIntoConstraints="NO" id="ODE-es-FGX">
                                 <rect key="frame" x="67" y="104" width="240" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="WW5-2I-bxx"/>
                                     <constraint firstAttribute="height" constant="150" id="cYH-vI-Ug6"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdS-zA-9u0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdS-zA-9u0">
                                 <rect key="frame" x="67.5" y="274" width="240" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbE-pk-51c">
                                 <rect key="frame" x="172" y="354" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTabbed:" destination="Ek4-Ic-KH4" eventType="touchUpInside" id="ibD-aN-9if"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,10 +81,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="yYk-fA-fbZ">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="uX4-te-UtY"/>
-                            <barButtonItem systemItem="organize" id="bDP-5A-VwU"/>
+                            <barButtonItem systemItem="camera" id="uX4-te-UtY">
+                                <connections>
+                                    <action selector="cameraTabbed:" destination="Ek4-Ic-KH4" id="JOi-S2-apP"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="bDP-5A-VwU">
+                                <connections>
+                                    <action selector="folderTabbed:" destination="Ek4-Ic-KH4" id="kil-tK-dM5"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageContainer" destination="ODE-es-FGX" id="EYE-Su-cBQ"/>
+                        <outlet property="imageTextfield" destination="vdS-zA-9u0" id="cqY-Ua-kLq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QxT-sa-dVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,4 +121,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="-644.52773613193403"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bild.png" width="578" height="498"/>
+    </resources>
 </document>

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GameListViewController.swift
 //  GameCollector
 //
 //  Created by Andreas Schiller on 10.02.17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
